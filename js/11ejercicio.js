@@ -13,16 +13,19 @@ const n = parseInt(prompt("Ingrese un número:"));
 let resultado = "";
 
 if (n % 2 === 0) {
-    resultado += " por 2";
+  resultado += " por 2";
 }
 if (n % 3 === 0) {
-    resultado += " por 3";
+  resultado += " por 3";
 }
 if (n % 5 === 0) {
-    resultado += " por 5";
+  resultado += " por 5";
 }
 if (n % 7 === 0) {
-    resultado += " por 7";
+  resultado += " por 7";
 }
-
-document.write(`El ${n} es divisible${resultado}.`);
+if (resultado == "") {
+  document.write(`El ${n} NO es divisible por 2,3,5,7`);
+} else {
+  document.write(`El ${n} es divisible ${resultado}.`);
+}
